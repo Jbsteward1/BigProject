@@ -1,20 +1,25 @@
-Wallet = 75
-
-greeting =("Hello welcome to Moes")
+Wallet = 50
+greeting =("Hello %s, welcome to Millys Phillys. Here is todays menu %s")
 print(greeting)
 
-menu =("Moes burrito $ 8.75\nMoes Taco salad $9.50\nMoes Quesidilla $9.00\nMoes Burrito Bowl $10.00\nMoes Kids Meal $6.50")
-print(menu)
+menu =("Super Philly cheesteak $ 13.50\nChicago Philly cheesesteak $12.50\nSuperCombo Philly with wings $19.00\nCheesesticks and philly $17.00\nUltimate Philly combo $21.50")
 
-name = input("print")
-food_option1 = input("Moes burrito") 
-food_option2 = input("Moes taco salad")
-food_option3 = input("Moes Quesidilla")
-food_option4 = input("Moes Burrito Bowl")
-food_option5 = input("Moes Kids meal")
 
-print(f"Hello{name}. Welcome to moes, what can i serve you today? {food_option}.Sure thing no problem.")
+name_of_customer = input("Can i have a name for your order? ")
+lenght_of_order = input("Thank you, what can i get for you today? ")
+print("Anything else?")
 
 
 
- 
+
+
+
+class Moes:
+    def __init__(self, customer, menu = ["Ultimate Philly combo $21.50,"], order = {}, total_price = 0, fufilled = False):
+        self.customer = customer
+        self.menu = menu
+        self.order = order
+    def add_customer_name(self, name):
+        self.customer["name"] = name
+    def add_menu(self, menu):
+        self.menu.append("food_option")
